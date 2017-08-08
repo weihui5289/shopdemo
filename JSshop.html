@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>原声Js</title>
+         <script src="js/shop.js"></script>
+        <style>
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, font, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;}
+
+    .clearfix:before,
+    .clearfix:after {
+    content: "";     /*内容为“.”就是一个英文的句号而已。也可以不写。*/
+    display: block;   /*加入的这个元素转换为块级元素。*/
+    clear: both;     /*清除左右两边浮动。*/
+    visibility: hidden;      /*可见度设为隐藏。注意它和display:none;是有区别的。visibility:hidden;仍然占据空间，只是看不到而已；*/
+    line-height: 0;    /*行高为0；*/
+    height: 0;     /*高度为0；*/
+    font-size:0;    /*字体大小为0；*/}
+
+    .clearfix { *zoom:1;}   /*这是针对于IE6的，因为IE6不支持:after伪类，这个神奇的zoom:1让IE6的元素可以清除浮动来包裹内部元素。*/
+
+    .main,.cars{width: 978px;margin:0 auto;}
+    .price img:nth-child(2){width:83px;
+    height:83px;
+    display: block;
+    float:left;
+    padding:8px 0;
+    }
+
+    .goods .top{margin-left:12px;
+    margin-top:14px;}
+
+    .goods .top>a{
+    color:#3b95a0;
+    text-decoration: none;
+    }
+
+    .goods .top span:last-child{
+    float:right;
+    }
+
+    .goods .top span i{
+    font-size:20px;
+    font-style:normal;
+    color:#ff7960;
+    font-weight:800;
+
+    }
+
+    .goods .price{border:1px solid #c4bcbc;
+    background-color:#f7f7f3;
+    margin-top:10px;}
+
+    .goods .price input{
+
+    float:left;
+    margin-right:18px;
+    margin-left:18px;
+    }
+
+    .goods .price b{
+    display:block;
+    width: 168px;
+    float:left;
+    padding:10px 8px;
+    font-weight:normal;
+
+    }
+
+
+    .goods .price b:nth-child(5){
+    display: block;
+    line-height: 88px;
+    text-align:center;
+    color:#FF776B;
+    font-size:18px;
+    }
+
+    .goods .price>span{
+    display:block;
+    float:left;
+    line-height: 98px;}
+
+    .goods .price span:nth-child(5){
+    width: 54px;
+
+    }
+    .goods .price ul{
+    width:233px;
+    list-style:none;
+
+    float:left;
+    margin-top:42px;
+    }
+
+    .goods .price ul li{
+        float:left;
+        overflow:hidden;}
+
+
+
+    .goods .price ul li input{
+        width: 30px;
+        height: 20px;
+        display: block;
+        float:left;}
+
+    .goods .price ul li button{
+        width: 18px;
+        height: 18px;
+        float:left;
+    }
+    .goods .price ul li:last-child{
+        margin-left:40px;
+    }
+
+    .goods .price p:nth-child(7) {
+        width: 75px;
+        float:left;
+        padding-top:10px;
+        line-height: 88px;
+        text-align:center;
+        color:#FF776B;
+        font-size:18px;
+    }
+
+
+
+
+    .goods .price .anniu{
+        float:right;
+    }
+
+    .goods .anniu a{
+        width: 66px;
+        display: block;
+        text-decoration: none;
+        color:#3b95a0;}
+
+    .goods .anniu .one{
+        margin:34px 20px 0 0;
+    }
+
+    .goods .anniu .two{
+        margin-left:10px;
+    }
+
+    .cars .down{
+        background-color:#f7f8f3;
+        margin-top:29px;
+        margin-bottom:50px;
+   }
+
+    .cars .down span{line-height:40px;}
+
+
+    .cars .down span:nth-child(5){
+        margin-left:360px;
+    }
+
+     .cars .down i{
+        font-size:20px;
+        font-style:normal;
+        color:#ff7960;
+        font-weight:800;
+    }
+
+     .nav{width: 978px;
+        margin-bottom:14px;}
+
+    .nav ul{width: 978px;
+        list-style:none;
+
+        /*display:table-row;*/}
+
+    .nav ul li{
+            float:left;
+            background-color:#f7f8f3;
+            line-height:38px;
+            font-weight:700;
+            color: #5A5A58;}
+
+    .nav ul li:nth-child(1){
+    padding-left: 13px;
+    padding-right: 88px;
+}
+    .nav li:nth-child(2){
+        padding-right: 108px;
+    }
+    .nav li:nth-child(3){
+        padding-right: 61px;
+    }
+    .nav li:nth-child(4){
+        padding-right: 82px;
+    }
+    .nav li:nth-child(5){
+        padding-right: 73px;
+    }
+    .nav li:nth-child(6){
+        padding-right: 68px;
+    }
+    .nav li:nth-child(7){
+        padding-right: 66px;
+    }
+    .nav li:nth-child(8){
+        padding-right: 56px;
+    }
+
+ .cars .gouwuche{
+      margin-left:700px;
+    }
+
+.cars .gouwuche span{
+        color:#14a598;
+    }
+
+
+        </style>
+    </head>
+    <body>
+
+    <div class="cars clearfix">
+    <div class="gouwuche">
+            <span>购物车状态</span>
+            <b>(<i>3</i>/99)</b>
+            </div>
+    <div class="down">
+        <a href="#">购物车</a>
+        <span>反选</span>
+        <span>批量删除</span>
+        <span>删除失效宝贝</span>
+     <span>宝贝总价￥<i>300.00</i></span>
+    <img src="images/settlement.jpg" alt="" />
+    </div>
+
+
+    <div class="nav">
+    <ul class="clearfix">
+        <li><input type="checkbox" class="all">全选</li>
+        <li>店铺宝贝</li>
+        <li>哇塞币</li>
+        <li>单价</li>
+        <li>数量</li>
+        <li>优惠</li>
+        <li>小计(元）</li>
+        <li>操作</li>
+    </ul>
+    </div>
+    <div class="list">
+    <div class="goods">
+
+    <div class="top">
+        <input type="checkbox" class="shop">店铺
+        <a href="#">八月的清迈</a>
+        <span>四川省 成都</span>
+        <span >宝贝总价￥<i class="bbzj">200.00</i></span>
+    </div>
+    <div class="price clearfix">
+        <input type="checkbox" class="radio">
+        <img src="images/1.jpeg" alt="" />
+        <b>JUST2YOU创意黑金男女个性手表</b>
+        <span>0</span>
+       <b>￥<span class="price1">100.00</span></b>
+        <ul class="clearfix">
+        <li class="count">
+         <button class="sub">-</button>
+        <input type="text" value="1">
+        <button class="add">+</button>
+        </li>
+        <li>--</li>
+        </ul>
+
+        <p>￥<span class="subTotal">100.00</span></p>
+        <div class="anniu">
+        <a class="one" href="#">加入最爱</a>
+        <a class="del" href="#">删除</a>
+        </div>
+    </div>
+
+     <div class="price clearfix">
+        <input type="checkbox" class="radio">
+        <img src="images/1.jpeg" alt="" />
+        <b>JUST2YOU创意黑金男女个性手表</b>
+        <span>0</span>
+       <b>￥<span class="price1">100.00</span></b>
+        <ul class="clearfix">
+        <li class="count">
+         <button class="sub">-</button>
+        <input type="text" value="1"+>
+        <button class="add">+</button>
+        </li>
+        <li>--</li>
+        </ul>
+
+        <p>￥<span class="subTotal">100.00</span></p>
+        <div class="anniu">
+        <a class="one" href="#">加入最爱</a>
+        <a class="del" href="#">删除</a>
+        </div>
+    </div>
+
+    </div>
+
+    </div>
+
+
+
+
+
+     <div class="goods">
+
+    <div class="top clearfix">
+        <input type="checkbox" class="shop">店铺
+        <a href="#">SOYE高级手工</a>
+        <span>河北省 秦皇岛</span>
+         <span >宝贝总价￥<i class="bbzj">100.00</i></span>
+    </div>
+    <div class="price clearfix">
+        <input type="checkbox" class="radio">
+        <img src="images/2.jpeg" alt="" />
+        <b>【rock岩纹】just2you革新设计师手表简约创意防水腕表男皮带手工</b>
+        <span>0</span>
+       <b>￥<span class="price1">100.00</span></b>
+        <ul class="clearfix">
+        <li class="count">
+         <button class="sub">-</button>
+        <input type="text" value="1" class="one">
+        <button class="add">+</button>
+        </li>
+        <li>--</li>
+        </ul>
+         <p>￥<span class="subTotal">100.00</span></p>
+        <div class="anniu">
+        <a class="one" href="#">加入最爱</a>
+        <a class="del" href="#">删除</a>
+        </div>
+    </div>
+    </div>
+     <div class="down">
+        <input type="checkbox" class="all">全选
+        <span>反选</span>
+        <span>批量删除</span>
+        <span>删除失效宝贝</span>
+     <span>宝贝总价￥<i>200.00</i></span>
+    <img src="images/settlement.jpg" alt="" />
+    </div>
+    </div>
+
+    </body>
+</html>
